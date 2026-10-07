@@ -56,16 +56,12 @@ classes: smoke, fire and person.
 > and Fusion Model for Enhanced Forest Fire Detection.* Remote Sens. 2025, 17,
 > 2593.
 
-Download the dataset from the original authors (USTC, State Key Laboratory of
-Fire Science). Official distribution links, listed on the authors' dataset page:
+Download the dataset from the following mirrors:
 
-- [Quark Netdisk](https://pan.quark.cn/s/9575da0a9dcc) — access code `ehjk`
-- [Quark Netdisk (raw data)](https://pan.quark.cn/s/253ee29867c3) — access code `D3Dw`
-- [Authors' dataset page](https://complex.ustc.edu.cn/sjwwataset/list.htm)
+- [Quark Netdisk](https://pan.quark.cn/s/ce3e6450be11?pwd=hyx1) — access code `hyx1`
+- [Google Drive](https://drive.google.com/file/d/1ZMti4vwcMg2xkdTN_PyyexeVPwFuKtrf/view?usp=sharing)
 
-Note that Quark Netdisk requires a mainland China phone number to access. A
-mirror is available on [Kaggle](https://www.kaggle.com/datasets/seddiktrk/rgbt-3m),
-which uses `rgb/` and `thermal/` folder names instead of `ir/`.
+Note that Quark Netdisk requires a mainland China phone number to access.
 
 Organise the files in this YOLO-style layout, where each RGB image has a
 same-named thermal counterpart:
