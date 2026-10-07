@@ -161,19 +161,25 @@ FireRGBTNet/
 ## Citation
 
 ```bibtex
-@article{ma2026firergbtnet,
-  title   = {FireRGBTNet: A Lightweight Forest Fire Detection Model Based on
-             Efficient RGB--Thermal Fusion},
-  author  = {Ma, Yifan and Shan, Weifeng and Wang, Maofa and Sui, Yanwei and
-             Wang, Mengyu},
-  journal = {Forests},
-  volume  = {17},
-  number  = {8},
-  pages   = {955},
-  year    = {2026},
-  doi     = {10.3390/f17080955}
+@article{Ma_2026,
+  title     = {FireRGBTNet: A Lightweight Forest Fire Detection Model Based on Efficient RGB–Thermal Fusion},
+  author    = {Ma, Yifan and Shan, Weifeng and Wang, Maofa and Sui, Yanwei and Wang, Mengyu},
+  journal   = {Forests},
+  publisher = {MDPI AG},
+  volume    = {17},
+  number    = {8},
+  pages     = {955},
+  year      = {2026},
+  month     = {Aug},
+  issn      = {1999-4907},
+  doi       = {10.3390/f17080955},
+  url       = {https://doi.org/10.3390/f17080955}
 }
 ```
+
+Cite as: Ma, Y.; Shan, W.; Wang, M.; Sui, Y.; Wang, M. FireRGBTNet: A
+Lightweight Forest Fire Detection Model Based on Efficient RGB-Thermal Fusion.
+*Forests* **2026**, *17*(8), 955. https://doi.org/10.3390/f17080955
 
 ## License
 
