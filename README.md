@@ -37,7 +37,7 @@ Requires Python 3.10+ and PyTorch 2.0+. The paper used PyTorch 2.4.1 + CUDA 11.8
 on a Tesla V100.
 
 ```bash
-git clone https://github.com/<your-account>/FireRGBTNet.git
+git clone https://github.com/whynotnanfeng/FireRGBTNet.git
 cd FireRGBTNet
 
 conda create -n firergbtnet python=3.10 -y
@@ -59,14 +59,13 @@ classes: smoke, fire and person.
 Download the dataset from the original authors (USTC, State Key Laboratory of
 Fire Science). Official distribution links, listed on the authors' dataset page:
 
-- Quark Netdisk: `https://pan.quark.cn/s/9575da0a9dcc` (code `ehjk`)
-- Quark Netdisk (raw data): `https://pan.quark.cn/s/253ee29867c3` (code `D3Dw`)
-- Authors' dataset page: `https://complex.ustc.edu.cn/sjwwataset/list.htm`
+- [Quark Netdisk](https://pan.quark.cn/s/9575da0a9dcc) — access code `ehjk`
+- [Quark Netdisk (raw data)](https://pan.quark.cn/s/253ee29867c3) — access code `D3Dw`
+- [Authors' dataset page](https://complex.ustc.edu.cn/sjwwataset/list.htm)
 
 Note that Quark Netdisk requires a mainland China phone number to access. A
-mirror is available on Kaggle
-(`https://www.kaggle.com/datasets/seddiktrk/rgbt-3m`), which uses `rgb/` and
-`thermal/` folder names instead of `ir/`.
+mirror is available on [Kaggle](https://www.kaggle.com/datasets/seddiktrk/rgbt-3m),
+which uses `rgb/` and `thermal/` folder names instead of `ir/`.
 
 Organise the files in this YOLO-style layout, where each RGB image has a
 same-named thermal counterpart:
