@@ -1,0 +1,24 @@
+# Core requirements for FireRGBTNet.
+#
+# Reference environment (Table 3 of the paper): PyTorch 2.4.1 + CUDA 11.8 on a
+# Tesla V100. The versions below are the minimum that the code is tested
+# against; newer releases generally work as well.
+
+# --- deep learning core -----------------------------------------------------
+torch>=2.0,<3.0
+torchvision>=0.15,<1.0
+lightning>=2.0,<3.0
+torchmetrics>=1.0,<2.0
+numpy>=1.24
+scipy>=1.10
+
+# --- data pipeline ----------------------------------------------------------
+opencv-python>=4.8
+Pillow>=10.0
+
+# --- metrics ----------------------------------------------------------------
+pycocotools>=2.0
+
+# --- visualisation (optional) ----------------------------------------------
+matplotlib>=3.7
+seaborn>=0.13

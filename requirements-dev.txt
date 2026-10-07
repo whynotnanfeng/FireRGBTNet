@@ -1,0 +1,7 @@
+# Optional extras for development: `pip install -r requirements-dev.txt`
+
+# Test runner
+pytest>=8.0
+
+# Coverage
+coverage>=7.0
