@@ -26,10 +26,32 @@ the RGBT-3M benchmark.
 | Multimodal Spatial Gated Fusion | `MSGF` (`SGCA` + `MishGLU`) | `firergbtnet/models/fusion.py` |
 | Feature pyramid neck | `FusionNeck` | `firergbtnet/models/neck.py` |
 | RT-DETR decoder with IoU-aware scoring | `RTDETRDecoder` | `firergbtnet/models/head.py` |
-| Joint set-prediction loss (Hungarian + NWD) | `SetCriterion` | `firergbtnet/criterion.py` |
+| Joint set-prediction loss (Hungarian + NWD) | `SetCriterion` | `firergbtnet/loss.py` |
 
 MSAE is an auxiliary supervision branch: it is active only during training and is
 dropped at inference, so it improves accuracy at zero deployment cost.
+
+## Module map
+
+Where each piece of the paper lives, including the parts that carry no name in
+the publication and are therefore filed under conventional names:
+
+| Paper / original name | Code location | Note |
+|---|---|---|
+| `RGBBlock`, `RGBUnit` | `models/backbone.py` | standard-convolution ELAN block |
+| `ThermalBlock`, `ThermalUnit` | `models/backbone.py` | large-kernel depthwise ELAN block |
+| `TED` (Target-Enhanced Downsampling) | `models/backbone.py` | dual-branch downsample with AWF |
+| `MSAE` | `models/alignment.py` | auxiliary alignment branch, Eqs. 12-18 |
+| `MSGF`, `SGCA`, `MishGLU` | `models/fusion.py` | spatial gated fusion, Eqs. 19-28 |
+| Feature pyramid neck | `models/neck.py` | top-down dual-stream FPN |
+| `RTDETRDecoder` | `models/head.py` | RT-DETR head with deformable attention |
+| `Conv` and the base units | `models/basic.py` | shared conv wrapper |
+| `FireRGBTNet` (was `RGBIRNet`) | `model.py` | LightningModule, train/val loops |
+| `loss.py` (was `criterion.py`) | `loss.py` | `SetCriterion`, `HungarianMatcher`, NWD |
+| `utils.py` | `boxes.py` | box conversions, IoU, GIoU |
+| `metrics.py` | `metrics.py` | mAP, P/R/F1, confusion matrix |
+| `data/datasets.py` | `data/dataset.py` | RGBT-3M dataset and augmentation |
+| `train.py` | `tools/train.py` | training entry point and callbacks |
 
 ## Installation
 
@@ -126,7 +148,7 @@ RGBT-3M validation split, 640 x 640 input, batch size 1 for throughput.
 FireRGBTNet/
 ├── firergbtnet/
 │   ├── model.py           # FireRGBTNet LightningModule
-│   ├── criterion.py       # Hungarian matching, NWD, IoU-aware set loss
+│   ├── loss.py            # Hungarian matching, NWD, IoU-aware set loss
 │   ├── metrics.py         # mAP, precision, recall, F1, confusion matrix
 │   ├── boxes.py           # box conversions, IoU, GIoU
 │   ├── models/

@@ -18,7 +18,7 @@ import torch
 import torch.optim as optim
 
 from .boxes import box_cxcywh_to_xyxy
-from .criterion import HungarianMatcher, SetCriterion
+from .loss import HungarianMatcher, SetCriterion
 from .metrics import AdvancedDetMetrics
 from .models import FusionNeck, HeterogeneousDualStreamBackbone, MSAE, RTDETRDecoder
 

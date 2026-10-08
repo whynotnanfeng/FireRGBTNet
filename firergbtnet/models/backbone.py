@@ -197,7 +197,13 @@ class TED(nn.Module):
 
         # Adaptive Weighted Fusion: w holds the branch importance weights and
         # v the learnable global scale (Eq. 10).
-        self.weight = nn.Parameter(torch.zeros(2))
+        #
+        # w must start above zero. The normalisation divides by sum(w), so an
+        # all-zero initialisation would drive every alpha to zero and zero out
+        # the module output entirely. Starting from ones gives each branch an
+        # equal weight of about 0.5, which keeps the signal alive and leaves the
+        # network free to rebalance the two paths during training.
+        self.weight = nn.Parameter(torch.ones(2))
         self.scale = nn.Parameter(torch.ones(2))
         self.eps = 1e-4
 

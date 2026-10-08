@@ -10,7 +10,7 @@ Reference implementation of the model published as:
 """
 
 from .boxes import box_cxcywh_to_xyxy, box_iou, box_xyxy_to_cxcywh, generalized_box_iou
-from .criterion import HungarianMatcher, SetCriterion, normalized_wasserstein_similarity
+from .loss import HungarianMatcher, SetCriterion, normalized_wasserstein_similarity
 from .metrics import AdvancedDetMetrics, BoxF1Score
 from .model import FireRGBTNet
 
